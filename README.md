@@ -62,7 +62,7 @@ database:
   host: 'localhost'
   port: '5432'
   name: 'example_db'
-  user: 'postgres'
+  user: 'user'
   password: 'your-password'
   ssl_mode: 'disable'
 
