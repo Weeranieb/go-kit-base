@@ -1,0 +1,16 @@
+server:
+  port: '8080'
+  host: 'localhost'
+
+database:
+  host: 'localhost'
+  port: '5432'
+  name: 'go_kit_base'
+  user: 'user'
+  password: 'password'
+  ssl_mode: 'disable'
+
+app:
+  environment: 'development'
+  log_level: 'info'
+  debug: false
