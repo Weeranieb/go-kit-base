@@ -109,7 +109,7 @@ func (s *userService) ListUsers(limit, offset int) ([]*model.UserResponse, error
 		return nil, err
 	}
 
-	var responses []*model.UserResponse
+	responses := make([]*model.UserResponse, 0, len(users))
 	for _, user := range users {
 		responses = append(responses, s.toUserResponse(user))
 	}
