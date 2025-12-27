@@ -9,6 +9,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+//go:generate go run github.com/vektra/mockery/v2@latest --name=UserService --output=./mocks/service --outpkg=service --filename=user_service.go --structname=MockUserService --with-expecter=false
 type UserService interface {
 	CreateUser(req *model.CreateUserRequest) (*model.UserResponse, error)
 	GetUser(id uint) (*model.UserResponse, error)

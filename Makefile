@@ -6,9 +6,8 @@ DB_NAME := go_kit_base
 run:
 	go run src/cmd/api/main.go
 
-gen-mocks-clean:
-	rm -rf src/internal/mocks
-	make gen-mocks
+gen-mocks:
+	PATH="$$(go env GOPATH)/bin:$$PATH" go generate ./...
 
 gen-swag:
 	swag init -g src/cmd/api/main.go -o docs --propertyStrategy snakecase

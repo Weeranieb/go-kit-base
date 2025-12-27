@@ -10,6 +10,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+//go:generate go run github.com/vektra/mockery/v2@latest --name=UserHandler --output=./mocks/handler --outpkg=handler --filename=user_handler.go --structname=MockUserHandler --with-expecter=false
 type UserHandler interface {
 	CreateUser(c *fiber.Ctx) error
 	GetUser(c *fiber.Ctx) error

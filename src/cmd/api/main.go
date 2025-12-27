@@ -11,8 +11,6 @@ import (
 	"github.com/weeranieb/go-kit-base/src/internal/handler"
 	"github.com/weeranieb/go-kit-base/src/internal/router"
 
-	_ "github.com/weeranieb/go-kit-base/docs" // Import docs package
-
 	"github.com/gofiber/fiber/v2"
 	"go.uber.org/dig"
 )

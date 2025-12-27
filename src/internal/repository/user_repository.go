@@ -6,6 +6,7 @@ import (
 	"gorm.io/gorm"
 )
 
+//go:generate go run github.com/vektra/mockery/v2@latest --name=UserRepository --output=./mocks/repository --outpkg=repository --filename=user_repository.go --structname=MockUserRepository --with-expecter=false
 type UserRepository interface {
 	Create(user *model.User) error
 	GetByID(id uint) (*model.User, error)
